@@ -20,6 +20,9 @@ window.openWindow = function(id) {
     highestZIndex++;
     win.style.zIndex = highestZIndex;
     gsap.fromTo(win, { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.5)" });
+    if (window.innerWidth <= 1024) {
+        setTimeout(() => win.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
+    }
 };
 
 windows.forEach(win => {
