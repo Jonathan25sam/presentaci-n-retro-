@@ -10,13 +10,13 @@ gsap.from("#win-hobbies", { duration: 1, x: "50vw", opacity: 0, ease: "power2.ou
 gsap.from("#win-cripto", { duration: 1.5, y: "100vh", opacity: 0, ease: "power2.out", delay: 1.4 });
 gsap.from("#win-chica", { duration: 1, scale: 0, rotation: 10, opacity: 0, ease: "back.out(1.2)", delay: 1.8 });
 
-// Controlador de ventanas (Drag & Drop + Touch)
+// Window manager
 const windows = document.querySelectorAll('.retro-window');
 let highestZIndex = 50; 
 
 window.openWindow = function(id) {
     const win = document.getElementById(id);
-    win.style.display = 'block';
+    win.style.display = 'flex';
     highestZIndex++;
     win.style.zIndex = highestZIndex;
     gsap.fromTo(win, { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.5)" });
@@ -40,6 +40,8 @@ windows.forEach(win => {
     header.ontouchstart = dragMouseDown;
 
     function dragMouseDown(e) {
+        if (e.target.closest('button')) return;
+
         e.preventDefault();
         highestZIndex++;
         win.style.zIndex = highestZIndex; 
@@ -69,7 +71,7 @@ windows.forEach(win => {
     }
 });
 
-// Reloj
+// Clock
 function updateClock() {
     const now = new Date();
     let hours = now.getHours();
@@ -85,7 +87,7 @@ gsap.to("#retro-floater-1", { x: 150, y: 80, rotation: -10, duration: 30, repeat
 gsap.to("#retro-floater-2", { x: -200, y: -100, duration: 35, repeat: -1, yoyo: true, ease: "sine.inOut" });
 gsap.to("#retro-floater-3", { x: -100, y: 150, rotation: 180, duration: 45, repeat: -1, yoyo: true, ease: "none" });
 
-// Estela del cursor
+// Cursor trail effect
 const trailChars = ['+', '-', 'x', '÷', '>', '<', '[', ']'];
 document.addEventListener("mousemove", (e) => {
     if (Math.random() > 0.6) return;
@@ -106,7 +108,7 @@ document.addEventListener("mousemove", (e) => {
     });
 });
 
-// Reproductor de Música
+// Audio player controls
 function toggleAudio() {
     const audio = document.getElementById('audio-player');
     const status = document.getElementById('playing-status');
