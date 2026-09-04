@@ -139,6 +139,10 @@
             <span class="text-white font-pixel text-3xl md:text-5xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">🕹️</span>
             <span class="bg-retroBlue text-white px-1 mt-1 md:mt-2 text-[9px] md:text-sm text-center leading-tight">Hobbies</span>
         </div>
+        <div class="flex flex-col items-center cursor-pointer group" onclick="openWindow('win-pgp')">
+            <span class="text-white font-pixel text-3xl md:text-5xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">🔐</span>
+            <span class="bg-retroBlue text-white px-1 mt-1 md:mt-2 text-[9px] md:text-sm text-center leading-tight">PGP Key</span>
+        </div>
     </div>
     <div id="win-galeria" class="retro-window w-[95%] md:w-[650px] win-border win-shadow top-[15%] md:top-[15%] left-[2.5%] md:left-[20%]" style="display: none;">
         <div class="window-header bg-retroBlue text-white font-pixel text-[10px] p-1.5 flex justify-between items-center cursor-grab active:cursor-grabbing">
@@ -224,6 +228,68 @@
             </div>
             <div class="mt-2 flex justify-end">
                 <a href="CV Jonathan Samuel Diaz Torres.pdf" download class="bg-gray-300 text-black font-sans font-bold text-xs py-2 px-4 win-border active:win-border-invert hover:bg-gray-200 decoration-transparent">📥 Descargar PDF</a>
+            </div>
+        </div>
+    </div>
+    <div id="win-pgp" class="retro-window w-[95%] md:w-[500px] win-border win-shadow top-[12%] md:top-[12%] left-[2.5%] md:left-[22%] z-40">
+        <div class="window-header bg-retroBlue text-white font-pixel text-[10px] p-1.5 flex justify-between items-center cursor-grab active:cursor-grabbing">
+            <span>LLAVE_PUBLICA.ASC</span>
+            <button onclick="this.closest('.retro-window').style.display='none'" class="bg-retroGray win-border active:win-border-invert text-black font-sans font-bold w-8 h-8 md:w-5 md:h-5 text-lg md:text-sm flex items-center justify-center cursor-pointer z-50">X</button>
+        </div>
+        <div class="m-1 p-2 bg-retroGray window-content-wrapper">
+            <div class="bg-white border-2 border-gray-600 border-inset h-[40vh] md:h-[300px] overflow-auto p-3">
+                <pre class="text-[9px] md:text-xs font-terminal break-all whitespace-pre-wrap select-all leading-relaxed">-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+i8ZjNIiUjLkOSsI=
+=gIwn
+-----END PGP PUBLIC KEY BLOCK-----</pre>
             </div>
         </div>
     </div>
@@ -320,7 +386,7 @@
                 <div class="border-2 border-[#00ff00] p-1 bg-black shadow-[0_0_15px_rgba(0,255,0,0.4)]">
                     <img src="fotos/chica.jpg" alt="Chica" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity filter sepia-[0.3]">
                 </div>
-                <p class="font-pixel text-yellow-300 text-[10px] mt-4 animate-flash tracking-widest drop-shadow-[1px_1px_0_#000]">~ AESTHETIC VIBES ~</p>
+                <p class="font-pixel text-yellow-300 text-[10px] mt-4 animate-flash tracking-widest drop-shadow-[1px_1px_0_#000]">~ RETRO VIBES ~</p>
             </div>
         </div>
     </div>
@@ -328,4 +394,3 @@
     <script src="script.js"></script>
 </body>
 </html>"""
-

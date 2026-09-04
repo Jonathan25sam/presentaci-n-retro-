@@ -4,6 +4,7 @@ gsap.to("#classic-car", { y: 1.5, duration: 0.1, yoyo: true, repeat: -1, ease: "
 gsap.to(".speed-line", { x: "-120vw", duration: 0.8, ease: "none", stagger: { each: 0.2, repeat: -1, from: "random" } });
 gsap.to(".smoke-particle", { x: -40, y: -30, scale: 2, opacity: 0, duration: 1.5, ease: "power1.out", stagger: { each: 0.3, repeat: -1 } });
 
+gsap.from("#win-pgp", { duration: 1, x: "50vw", opacity: 0, ease: "power2.out", delay: 0.1 });
 gsap.from("#win-perfil", { duration: 1, scale: 0, opacity: 0, ease: "back.out(1.5)", delay: 0.2 });
 gsap.from("#win-academia", { duration: 1, x: "-50vw", opacity: 0, ease: "power2.out", delay: 0.6 });
 gsap.from("#win-hobbies", { duration: 1, x: "50vw", opacity: 0, ease: "power2.out", delay: 1 });
