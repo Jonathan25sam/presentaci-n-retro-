@@ -1,0 +1,57 @@
+<svg width="800" height="160" viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.15"/>
+      <stop offset="40%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="60%" style="stop-color:#aaaaff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.15"/>
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        from="-1 0"
+        to="1 0"
+        dur="3s"
+        repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="subtitleColor" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#888888;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#aaaaaa;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#888888;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo negro -->
+  <rect width="800" height="160" fill="#000000"/>
+
+  <!-- Línea decorativa superior -->
+  <line x1="60" y1="28" x2="740" y2="28" stroke="#222222" stroke-width="1"/>
+
+  <!-- Nombre principal con animación shimmer -->
+  <text
+    x="400"
+    y="90"
+    font-family="'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="58"
+    font-weight="700"
+    text-anchor="middle"
+    fill="url(#shimmer)"
+    letter-spacing="2">
+    Jonathan Samuel
+  </text>
+
+  <!-- Subtítulo -->
+  <text
+    x="400"
+    y="125"
+    font-family="'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="14"
+    font-weight="400"
+    text-anchor="middle"
+    fill="url(#subtitleColor)"
+    letter-spacing="4">
+    BACKEND ENGINEER · JAVA &amp; SPRING BOOT
+  </text>
+
+  <!-- Línea decorativa inferior -->
+  <line x1="60" y1="142" x2="740" y2="142" stroke="#222222" stroke-width="1"/>
+</svg>
